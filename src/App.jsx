@@ -118,7 +118,13 @@ function App() {
       </div>
 
       <div class="stats">
-        <p>Angle: {orientation.toFixed()}°</p>
+        <p>
+          Angle:{" "}
+          {typeof orientation == "number"
+            ? orientation.toFixed()
+            : "Invalid Device or Permissions."}
+          °
+        </p>
       </div>
     </>
   );
