@@ -4,8 +4,6 @@ import "./App.css";
 
 const LocationText = ({ tag, h, subH, rotation }) => {
   const headerArray = h.split("/br");
-  console.log("h looks like", h);
-  console.log("there is no way", h.split("\n"));
 
   return (
     <div
@@ -24,11 +22,9 @@ const LocationText = ({ tag, h, subH, rotation }) => {
 };
 
 function App() {
-  const [orientation, setOrientation] = useState("unset");
+  const [orientation, setOrientation] = useState(0);
 
   const handleOrientation = (event) => {
-    console.log("Yeah, something...", event);
-
     setOrientation(event.alpha);
   };
 
@@ -121,8 +117,8 @@ function App() {
         <img class="map-image-layer" src={blankMap}></img>
       </div>
 
-      <div>
-        <p>Orientation.Aplha (left and right panning) {orientation}°</p>
+      <div class="stats">
+        <p>Angle: {orientation.toFixed()}°</p>
       </div>
     </>
   );

@@ -75,11 +75,17 @@
 .fixed-map-text h2,
 .fixed-map-text p {
   margin: 0;
+  color: rgba(255, 255, 255, 0.829);
 }
 
 .forced-br::after {
   content: "\a";
   white-space: pre;
+}
+
+.stats {
+  margin-top: 75px;
+  color: #938e84;
 }
 
 /* locations */
