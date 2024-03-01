@@ -1,4 +1,5 @@
 import { useState } from "react";
+import blankMap from "../src/assets/MCMH-MAP-BLANK.png";
 import "./App.css";
 
 const LocationText = ({ tag, h, subH, rotation }) => {
@@ -117,7 +118,7 @@ function App() {
           </div>
         </div>
 
-        <img class="map-image-layer" src="src\assets\MCMH-MAP-BLANK.png"></img>
+        <img class="map-image-layer" src={blankMap}></img>
       </div>
 
       <div>
